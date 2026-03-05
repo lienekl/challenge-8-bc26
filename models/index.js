@@ -1,24 +1,29 @@
-const { Model, DataTypes } = require("sequelize");
+// import all models
+const Post = require("./post");
+const Category = require("./category");
+const User = require("./user");
 
-const sequelize = require("../config/connection");
+Post.belongsTo(Category, {
+  foreignKey: "categoryId",
+  as: "category",
+});
 
-class Category extends Model {}
+Category.hasMany(Post, {
+  foreignKey: "categoryId",
+  as: "posts",
+});
 
-Category.init(
-  {
-    category_name: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "category",
-  }
-);
+User.hasMany(Post, {
+  foreignKey: "userId",
+  onDelete: "CASCADE",
+});
 
-// Export Post model
-module.exports = Category;
+Post.belongsTo(User, {
+  foreignKey: "userId",
+});
+
+module.exports = {
+  Post,
+  Category,
+  User,
+};

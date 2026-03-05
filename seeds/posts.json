@@ -1,122 +1,142 @@
 [
   {
-    "title": "The Rise of AI in Web Development",
-    "content": "AI is transforming how we build websites, making development faster and smarter.",
+    "title": "Classic Spaghetti Carbonara",
+    "content": "Whisk eggs and grated Pecorino Romano together before tossing with hot pasta and crispy guanciale.",
     "postedBy": "John Doe",
-    "createdOn": "2024-02-04T12:00:00Z"
+    "createdOn": "2024-02-04T12:00:00Z",
+    "categoryName": "Italian"
   },
   {
-    "title": "Understanding JavaScript Closures",
-    "content": "Closures allow functions to retain access to variables even after execution.",
+    "title": "Homemade Beef Tacos",
+    "content": "Season lean ground beef with cumin and chili powder, serving in warm tortillas with fresh salsa.",
     "postedBy": "Jane Smith",
-    "createdOn": "2024-02-03T10:15:00Z"
+    "createdOn": "2024-02-03T10:15:00Z",
+    "categoryName": "Mexican"
   },
   {
-    "title": "Node.js Performance Optimization Tips",
-    "content": "Learn how to speed up your Node.js applications with caching and clustering.",
+    "title": "Creamy Mushroom Risotto",
+    "content": "Slowly add warm vegetable broth to arborio rice, stirring constantly until the consistency is rich and velvety.",
     "postedBy": "Alice Brown",
-    "createdOn": "2024-02-02T08:45:00Z"
+    "createdOn": "2024-02-02T08:45:00Z",
+    "categoryName": "Vegetarian"
   },
   {
-    "title": "Mastering Sequelize for Database Management",
-    "content": "Sequelize simplifies working with databases in Node.js.",
+    "title": "Lemon Garlic Butter Salmon",
+    "content": "Sear salmon fillets in a pan with melted butter, minced garlic, and a heavy squeeze of fresh lemon.",
     "postedBy": "Bob White",
-    "createdOn": "2024-02-01T14:30:00Z"
+    "createdOn": "2024-02-01T14:30:00Z",
+    "categoryName": "Seafood"
   },
   {
-    "title": "Async/Await in JavaScript Explained",
-    "content": "Understanding asynchronous JavaScript using async/await.",
+    "title": "Spicy Thai Green Curry",
+    "content": "Simmer coconut milk with green curry paste, bamboo shoots, and Thai basil for an aromatic spicy kick.",
     "postedBy": "Charlie Green",
-    "createdOn": "2024-01-30T09:00:00Z"
+    "createdOn": "2024-01-30T09:00:00Z",
+    "categoryName": "Asian"
   },
   {
-    "title": "Introduction to GraphQL",
-    "content": "GraphQL provides a flexible alternative to REST APIs.",
+    "title": "Fluffy Buttermilk Pancakes",
+    "content": "Mix flour, buttermilk, and a pinch of baking soda, then cook until golden bubbles form on the surface.",
     "postedBy": "Dana Black",
-    "createdOn": "2024-01-29T17:00:00Z"
+    "createdOn": "2024-01-29T17:00:00Z",
+    "categoryName": "Breakfast"
   },
   {
-    "title": "Why TypeScript is Gaining Popularity",
-    "content": "TypeScript enhances JavaScript by adding static typing.",
+    "title": "Slow-Roasted Beef Stew",
+    "content": "Brown beef chunks and simmer them with carrots, potatoes, and red wine for several hours until tender.",
     "postedBy": "Ethan Ford",
-    "createdOn": "2024-01-28T11:30:00Z"
+    "createdOn": "2024-01-28T11:30:00Z",
+    "categoryName": "Comfort Food"
   },
   {
-    "title": "Building RESTful APIs with Express",
-    "content": "A guide to creating scalable RESTful APIs using Express.js.",
+    "title": "Fresh Greek Salad",
+    "content": "Combine crisp cucumbers, cherry tomatoes, Kalamata olives, and feta cheese with a drizzle of olive oil.",
     "postedBy": "Fiona Blue",
-    "createdOn": "2024-01-27T15:45:00Z"
+    "createdOn": "2024-01-27T15:45:00Z",
+    "categoryName": "Salads"
   },
   {
-    "title": "Dockerizing Your Node.js Application",
-    "content": "Learn how to containerize your Node.js app with Docker.",
+    "title": "Roasted Garlic Hummus",
+    "content": "Blend chickpeas, tahini, lemon juice, and roasted garlic cloves until the mixture is perfectly smooth.",
     "postedBy": "George Red",
-    "createdOn": "2024-01-26T08:20:00Z"
+    "createdOn": "2024-01-26T08:20:00Z",
+    "categoryName": "Appetizers"
   },
   {
-    "title": "How to Secure a Node.js Application",
-    "content": "Implement security best practices for your Node.js apps.",
+    "title": "Classic French Onion Soup",
+    "content": "Caramelize onions slowly for 40 minutes before adding beef stock and topping with toasted Gruyère cheese.",
     "postedBy": "Hannah Yellow",
-    "createdOn": "2024-01-25T13:10:00Z"
+    "createdOn": "2024-01-25T13:10:00Z",
+    "categoryName": "Soups"
   },
   {
-    "title": "React Hooks: The Ultimate Guide",
-    "content": "Understand and implement React Hooks for state and effects.",
+    "title": "Crispy Chicken Schnitzel",
+    "content": "Coat thin chicken breasts in flour, beaten eggs, and breadcrumbs before frying until golden and crunchy.",
     "postedBy": "Ian Silver",
-    "createdOn": "2024-01-24T10:55:00Z"
+    "createdOn": "2024-01-24T10:55:00Z",
+    "categoryName": "Main Course"
   },
   {
-    "title": "The Benefits of Serverless Architecture",
-    "content": "Exploring serverless computing and how it reduces costs.",
+    "title": "Decadent Chocolate Lava Cake",
+    "content": "Bake chocolate batter until the edges are firm but the center remains warm and liquid.",
     "postedBy": "Julia Gold",
-    "createdOn": "2024-01-23T18:25:00Z"
+    "createdOn": "2024-01-23T18:25:00Z",
+    "categoryName": "Desserts"
   },
   {
-    "title": "WebSockets vs HTTP: What's the Difference?",
-    "content": "Understanding real-time communication with WebSockets.",
+    "title": "Sweet and Sour Pork",
+    "content": "Toss fried pork pieces in a vibrant sauce made of pineapple juice, vinegar, and ketchup.",
     "postedBy": "Kevin Brown",
-    "createdOn": "2024-01-22T07:40:00Z"
+    "createdOn": "2024-01-22T07:40:00Z",
+    "categoryName": "Asian"
   },
   {
-    "title": "Automating Tasks with Node.js",
-    "content": "Use Node.js for task automation with scripts and schedulers.",
+    "title": "Homemade Margherita Pizza",
+    "content": "Top fresh dough with crushed San Marzano tomatoes, fresh mozzarella, and a handful of basil leaves.",
     "postedBy": "Lara White",
-    "createdOn": "2024-01-21T16:50:00Z"
+    "createdOn": "2024-01-21T16:50:00Z",
+    "categoryName": "Italian"
   },
   {
-    "title": "A Guide to MongoDB Aggregation Pipeline",
-    "content": "Learn how to perform advanced queries with MongoDB.",
+    "title": "Zesty Shrimp Scampi",
+    "content": "Sauté large shrimp in a mixture of butter, olive oil, white wine, and crushed red pepper flakes.",
     "postedBy": "Mike Gray",
-    "createdOn": "2024-01-20T12:35:00Z"
+    "createdOn": "2024-01-20T12:35:00Z",
+    "categoryName": "Seafood"
   },
   {
-    "title": "Why You Should Use Next.js for React Apps",
-    "content": "Next.js enhances React with server-side rendering and SEO.",
+    "title": "Quinoa Veggie Bowl",
+    "content": "Layer cooked quinoa with roasted sweet potatoes, avocado slices, and a lemon-tahini dressing.",
     "postedBy": "Nina Purple",
-    "createdOn": "2024-01-19T14:20:00Z"
+    "createdOn": "2024-01-19T14:20:00Z",
+    "categoryName": "Healthy"
   },
   {
-    "title": "Understanding OAuth 2.0 Authentication",
-    "content": "OAuth 2.0 is a secure authorization framework for web apps.",
+    "title": "Authentic Beef Pho",
+    "content": "Infuse beef broth with star anise and cinnamon, then serve over rice noodles with thin steak slices.",
     "postedBy": "Oscar Blue",
-    "createdOn": "2024-01-18T09:45:00Z"
+    "createdOn": "2024-01-18T09:45:00Z",
+    "categoryName": "Asian"
   },
   {
-    "title": "Testing Your Node.js Application",
-    "content": "Learn about Jest, Mocha, and other testing frameworks.",
+    "title": "Classic Caesar Salad",
+    "content": "Toss romaine lettuce with homemade dressing, crunchy croutons, and shavings of Parmesan cheese.",
     "postedBy": "Paula Pink",
-    "createdOn": "2024-01-17T11:15:00Z"
+    "createdOn": "2024-01-17T11:15:00Z",
+    "categoryName": "Salads"
   },
   {
-    "title": "Scaling Node.js Applications",
-    "content": "Techniques to handle high traffic with Node.js efficiently.",
+    "title": "Oven-Roasted Root Vegetables",
+    "content": "Toss carrots, parsnips, and beets in rosemary and olive oil, then roast at 400°F until tender.",
     "postedBy": "Quinn Orange",
-    "createdOn": "2024-01-16T15:05:00Z"
+    "createdOn": "2024-01-16T15:05:00Z",
+    "categoryName": "Sides"
   },
   {
-    "title": "Deploying Your App on AWS with CI/CD",
-    "content": "Learn how to automate deployments using AWS and CI/CD pipelines.",
+    "title": "Apple Cinnamon Muffins",
+    "content": "Fold diced Granny Smith apples into a cinnamon-spiced batter and bake until a toothpick comes out clean.",
     "postedBy": "Ryan Green",
-    "createdOn": "2024-01-15T08:50:00Z"
+    "createdOn": "2024-01-15T08:50:00Z",
+    "categoryName": "Bakery"
   }
 ]
