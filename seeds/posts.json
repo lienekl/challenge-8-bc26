@@ -39,7 +39,7 @@
     "content": "Mix flour, buttermilk, and a pinch of baking soda, then cook until golden bubbles form on the surface.",
     "postedBy": "Dana Black",
     "createdOn": "2024-01-29T17:00:00Z",
-    "categoryName": "Breakfast"
+    "categoryName": "Baking"
   },
   {
     "title": "Slow-Roasted Beef Stew",
@@ -60,7 +60,7 @@
     "content": "Blend chickpeas, tahini, lemon juice, and roasted garlic cloves until the mixture is perfectly smooth.",
     "postedBy": "George Red",
     "createdOn": "2024-01-26T08:20:00Z",
-    "categoryName": "Appetizers"
+    "categoryName": "Snacks"
   },
   {
     "title": "Classic French Onion Soup",
@@ -74,7 +74,7 @@
     "content": "Coat thin chicken breasts in flour, beaten eggs, and breadcrumbs before frying until golden and crunchy.",
     "postedBy": "Ian Silver",
     "createdOn": "2024-01-24T10:55:00Z",
-    "categoryName": "Main Course"
+    "categoryName": "Chicken"
   },
   {
     "title": "Decadent Chocolate Lava Cake",
@@ -109,7 +109,7 @@
     "content": "Layer cooked quinoa with roasted sweet potatoes, avocado slices, and a lemon-tahini dressing.",
     "postedBy": "Nina Purple",
     "createdOn": "2024-01-19T14:20:00Z",
-    "categoryName": "Healthy"
+    "categoryName": "Vegetarian"
   },
   {
     "title": "Authentic Beef Pho",
@@ -130,13 +130,13 @@
     "content": "Toss carrots, parsnips, and beets in rosemary and olive oil, then roast at 400°F until tender.",
     "postedBy": "Quinn Orange",
     "createdOn": "2024-01-16T15:05:00Z",
-    "categoryName": "Sides"
+    "categoryName": "Vegetarian"
   },
   {
     "title": "Apple Cinnamon Muffins",
     "content": "Fold diced Granny Smith apples into a cinnamon-spiced batter and bake until a toothpick comes out clean.",
     "postedBy": "Ryan Green",
     "createdOn": "2024-01-15T08:50:00Z",
-    "categoryName": "Bakery"
+    "categoryName": "Baking"
   }
 ]

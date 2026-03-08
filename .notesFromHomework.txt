@@ -1,1 +1,13 @@
-not
+I copied all files and folders from w8s3 ex-10. 
+Then I opened bash terminal and run 'npm init -y' which creates package.json file. 
+Then run 'mysql -u root -p' - Open MySQL in the terminal:
+Then run 'source db/schema.sql' - Run the following command to set up the database
+Then 'quit' - Exit MySQL
+Then run 'npm install' 
+run 'npm install express'
+run 'npm run seed'
+run 'npm run dev'
+
+
+
+

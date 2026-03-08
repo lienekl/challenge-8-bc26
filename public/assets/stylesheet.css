@@ -8,13 +8,14 @@ body {
 
 .logoDiv {
     display: flex;
+    max-width: 400px;
 }
 
 .logo {
-    max-width: 300px;
+    max-width: 400px;
     align-items: center;
     justify-content: center;
-
+    text-align: center;
 }
 
 .container {
