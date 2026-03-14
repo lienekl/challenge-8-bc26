@@ -1,30 +1,32 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #F3EFE0;
     text-align: center;
     margin: 0;
     padding: 20px;
 }
 
-.logoDiv {
-    display: flex;
-    max-width: 400px;
-}
-
 .logo {
+    display: block;
     max-width: 400px;
+    margin: auto;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
 .container {
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
-    background: white;
+    background: #f4ebda;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #464241;
+    font-family: "Noto Serif", serif;
 }
 
 input,
@@ -32,6 +34,7 @@ button {
     width: 90%;
     margin: 10px 0;
     padding: 10px;
+    font-family: "Montserrat Alternates", sans-serif;
 }
 
 input[type="text"],

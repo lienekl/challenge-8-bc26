@@ -23,10 +23,6 @@ Post.init(
       allowNull: false,
       defaultValue: Sequelize.NOW,
     },
-    categoryName: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
   },
   {
     sequelize,

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -11,39 +16,42 @@
 <body>
 
     <header>
-        <div class="logoDiv">
-            <img class="logo" src="./assets/images/logo2.png" width="300" />
-        </div>
+
     </header>
     <main>
-    <div class="container" id="auth-container">
+        <div class="container" id="auth-container">
+            <div class="logoDiv">
+                <img class="logo" src="./assets/images/logo3.png" width="300" />
+            </div>
+            <h2>Register</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <hr>
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
 
-        <h2>Register</h2>
-        <input type="text" id="username" placeholder="Username">
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Password">
-        <button onclick="register()">Register</button>
-        <hr>
-        <h2>Login</h2>
-        <input type="email" id="login-email" placeholder="Email">
-        <input type="password" id="login-password" placeholder="Password">
-        <button onclick="login()">Login</button>
-    </div>
-
-    <div class="container hidden" id="app-container">
-        <h2>Welcome</h2>
-        <button onclick="logout()">Logout</button>
-        <hr>
-        <h2>Create a Post</h2>
-        <input type="text" id="post-title" placeholder="Title">
-        <textarea id="post-content" placeholder="Content"></textarea>
-        <button onclick="createPost()">Submit Post</button>
-        <hr>
-        <h2>Posts</h2>
-        <button onclick="fetchPosts()">Load Posts</button>
-        <div id="posts"></div>
-    </div>
-</main>
+        <div class="container hidden" id="app-container">
+            <div class="logoDiv">
+                <img class="logo" src="./assets/images/logo4.png" width="300" />
+            </div>
+            <h2>Welcome</h2>
+            <button onclick="logout()">Logout</button>
+            <hr>
+            <h2>Create a Post</h2>
+            <input type="text" id="post-title" placeholder="Title">
+            <textarea id="post-content" placeholder="Content"></textarea>
+            <button onclick="createPost()">Submit Post</button>
+            <hr>
+            <h2>Posts</h2>
+            <button onclick="fetchPosts()">Load Posts</button>
+            <div id="posts"></div>
+        </div>
+    </main>
     <script src="./assets/script.js"></script>
 </body>
 
