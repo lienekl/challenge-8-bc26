@@ -35,6 +35,7 @@ function login() {
       // Save the token in the local storage
       if (data.token) {
         localStorage.setItem("authToken", data.token);
+        localStorage.setItem("userId", data.userId)
         token = data.token;
 
         alert("User Logged In successfully");
@@ -78,12 +79,68 @@ function fetchPosts() {
       postsContainer.innerHTML = "";
       posts.forEach((post) => {
         const div = document.createElement("div");
-        div.innerHTML = `<h3>${post.title}</h3><p>${
-          post.content
-        }</p><small>By: ${post.postedBy} on ${new Date(
-          post.createdOn
+        div.className = "blog-posts";
+
+        const blogCategory = post.category ? post.category.categoryName : "General";
+        const postedBy = post.user ? post.user.username : "Unknown Author";
+
+
+        div.innerHTML = `
+        <h3>${post.title}</h3>
+        <p>${post.content}</p>
+        <p>Category: ${blogCategory}</p>
+        <small>Added by: ${postedBy} on ${new Date(
+          post.created_on  
         ).toLocaleString()}</small>`;
-        postsContainer.appendChild(div);
+
+         //EDIT button
+        const editBtn = document.createElement("button");
+        editBtn.className = "edit";
+        editBtn.textContent = "Edit";
+        editBtn.addEventListener("click", async () => {
+          const currentText = item.value;
+          const newText = prompt("Update your text:", currentText);
+
+          if (newText !== null && newText.trim() !== "") {
+            try {
+              const response = await fetch(`/api/posts/${post.id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ post: newText }),
+              });
+
+              if (response.ok) {
+                fetchData(); 
+              }
+            } catch (error) {
+              console.error("Error updating:", error);
+            }
+          }
+        });
+        // DELETE button
+        const deleteBtn = document.createElement("button");
+        deleteBtn.className = "delete";
+        deleteBtn.textContent = "x";
+        deleteBtn.onclick = () => deleteNote(note.id);
+        const deleteNote = async () => {
+          if (confirm("Do you want to DELETE your blog post?")) {
+            try {
+              const response = await fetch(`/api/posts${post.id}`, {
+                method: "DELETE",
+              });
+
+              if (response.ok) {
+                fetchData(); // 
+              }
+            } catch (error) {
+              console.error("Error deleting:", error);
+            }
+          }
+        };
+
+        Container.appendChild(div);
+        div.appendChild(editBtn);
+        div.appendChild(deleteBtn);
       });
     });
 }
@@ -91,13 +148,15 @@ function fetchPosts() {
 function createPost() {
   const title = document.getElementById("post-title").value;
   const content = document.getElementById("post-content").value;
+  const category_id = document.getElementById("categoryName").value;
+  const user_id = localStorage.getItem("userId");
   fetch("http://localhost:3001/api/posts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ title, content, postedBy: "User" }),
+    body: JSON.stringify({ title, content, category_id, user_id, }),
   })
     .then((res) => res.json())
     .then(() => {

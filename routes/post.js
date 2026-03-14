@@ -20,7 +20,14 @@ app.post("/", async (req, res) => {
 app.get("/", async (req, res) => {
   try {
     const posts = await Post.findAll();
-
+    /* this need to be in brackets after findAll
+          {
+          where:filter,
+          include: [
+            { model: User, as "user", attributes: ["username"] }, 
+            { model: Category, as "category", attributes: ["categoryName"] }
+          ],
+        } */
     res.json(posts);
   } catch (error) {
     res.status(500).json({ error: "Error retrieving posts", error });

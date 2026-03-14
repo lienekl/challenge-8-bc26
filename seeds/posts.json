@@ -1,142 +1,142 @@
 [
   {
-    "title": "Classic Spaghetti Carbonara",
-    "content": "Whisk eggs and grated Pecorino Romano together before tossing with hot pasta and crispy guanciale.",
-    "postedBy": "John Doe",
-    "createdOn": "2024-02-04T12:00:00Z",
-    "categoryName": "Italian"
+    "title": "Fluffy Blueberry Pancakes",
+    "content": "Thick stacks of buttermilk pancakes bursting with fresh berries and drizzled with organic maple syrup.",
+    "user_id": "Sarah Jenkins",
+    "category_id": 1,
+    "created_on": "2024-02-01T08:00:00Z"
   },
   {
-    "title": "Homemade Beef Tacos",
-    "content": "Season lean ground beef with cumin and chili powder, serving in warm tortillas with fresh salsa.",
-    "postedBy": "Jane Smith",
-    "createdOn": "2024-02-03T10:15:00Z",
-    "categoryName": "Mexican"
+    "title": "Overnight Chia Seed Pudding",
+    "content": "A healthy, meal-prep friendly start made with almond milk, honey, and topped with fresh mango chunks.",
+    "user_id": 2,
+    "category_id": 1,
+    "created_on": "2024-02-02T07:15:00Z"
   },
   {
-    "title": "Creamy Mushroom Risotto",
-    "content": "Slowly add warm vegetable broth to arborio rice, stirring constantly until the consistency is rich and velvety.",
-    "postedBy": "Alice Brown",
-    "createdOn": "2024-02-02T08:45:00Z",
-    "categoryName": "Vegetarian"
+    "title": "Shakshuka with Feta",
+    "content": "Spiced tomato and bell pepper sauce with poached eggs, salty feta crumbles, and toasted sourdough.",
+    "user_id": 3,
+    "category_id": 1,
+    "created_on": "2024-02-03T09:30:00Z"
   },
   {
-    "title": "Lemon Garlic Butter Salmon",
-    "content": "Sear salmon fillets in a pan with melted butter, minced garlic, and a heavy squeeze of fresh lemon.",
-    "postedBy": "Bob White",
-    "createdOn": "2024-02-01T14:30:00Z",
-    "categoryName": "Seafood"
+    "title": "Mediterranean Quinoa Bowl",
+    "content": "Fluffy quinoa topped with cucumbers, chickpeas, kalamata olives, and a zesty lemon-tahini dressing.",
+    "user_id": "Sarah Jenkins",
+    "category_id": 2,
+    "created_on": "2024-02-04T12:00:00Z"
+  },
+  {
+    "title": "Pesto Chicken Wrap",
+    "content": "Sliced grilled chicken breast, sun-dried tomatoes, baby spinach, and nut-free basil pesto in a whole wheat tortilla.",
+    "user_id": 2,
+    "category_id": 2,
+    "created_on": "2024-02-05T13:10:00Z"
+  },
+  {
+    "title": "Roasted Tomato Basil Soup",
+    "content": "Slow-roasted vine tomatoes blended with fresh garden basil, garlic, and a touch of heavy cream.",
+    "user_id": 3,
+    "category_id": 2,
+    "created_on": "2024-02-06T12:45:00Z"
+  },
+  {
+    "title": "Garlic Butter Pan-Seared Salmon",
+    "content": "Crispy skin salmon fillets finished with a lemon-garlic butter glaze and served with steamed asparagus.",
+    "user_id": "Sarah Jenkins",
+    "category_id": 3,
+    "created_on": "2024-02-07T18:30:00Z"
+  },
+  {
+    "title": "Slow-Cooker Beef Stew",
+    "content": "Tender chunks of chuck roast with root vegetables in a rich, savory red wine and rosemary broth.",
+    "user_id": 3,
+    "category_id": 3,
+    "created_on": "2024-02-08T19:00:00Z"
+  },
+  {
+    "title": "Mushroom Risotto",
+    "content": "Creamy Arborio rice folded with sautéed cremini mushrooms, aged parmesan, and fresh thyme.",
+    "user_id": 2,
+    "category_id": 3,
+    "created_on": "2024-02-09T20:15:00Z"
   },
   {
     "title": "Spicy Thai Green Curry",
-    "content": "Simmer coconut milk with green curry paste, bamboo shoots, and Thai basil for an aromatic spicy kick.",
-    "postedBy": "Charlie Green",
-    "createdOn": "2024-01-30T09:00:00Z",
-    "categoryName": "Asian"
+    "content": "A fragrant coconut milk-based curry with bamboo shoots, Thai basil, and served over steamed jasmine rice.",
+    "user_id": "Sarah Jenkins",
+    "category_id": 3,
+    "created_on": "2024-02-10T19:45:00Z"
   },
   {
-    "title": "Fluffy Buttermilk Pancakes",
-    "content": "Mix flour, buttermilk, and a pinch of baking soda, then cook until golden bubbles form on the surface.",
-    "postedBy": "Dana Black",
-    "createdOn": "2024-01-29T17:00:00Z",
-    "categoryName": "Baking"
+    "title": "Sweet Potato & Black Bean Tacos",
+    "content": "Roasted sweet potato cubes with smoky black beans, fresh avocado, and a tangy lime crema.",
+    "user_id": 2,
+    "category_id": 4,
+    "created_on": "2024-02-11T18:00:00Z"
   },
   {
-    "title": "Slow-Roasted Beef Stew",
-    "content": "Brown beef chunks and simmer them with carrots, potatoes, and red wine for several hours until tender.",
-    "postedBy": "Ethan Ford",
-    "createdOn": "2024-01-28T11:30:00Z",
-    "categoryName": "Comfort Food"
+    "title": "Eggplant Parmesan Bake",
+    "content": "Layers of herb-breaded eggplant slices, homemade marinara sauce, and gooey melted mozzarella.",
+    "user_id": 3,
+    "category_id": 4,
+    "created_on": "2024-02-12T17:30:00Z"
   },
   {
-    "title": "Fresh Greek Salad",
-    "content": "Combine crisp cucumbers, cherry tomatoes, Kalamata olives, and feta cheese with a drizzle of olive oil.",
-    "postedBy": "Fiona Blue",
-    "createdOn": "2024-01-27T15:45:00Z",
-    "categoryName": "Salads"
+    "title": "Crispy Tofu Stir-Fry",
+    "content": "Extra-firm tofu cubes tossed with snap peas, bell peppers, and a ginger-soy glaze.",
+    "user_id": "Sarah Jenkins",
+    "category_id": 4,
+    "created_on": "2024-02-13T12:20:00Z"
   },
   {
-    "title": "Roasted Garlic Hummus",
-    "content": "Blend chickpeas, tahini, lemon juice, and roasted garlic cloves until the mixture is perfectly smooth.",
-    "postedBy": "George Red",
-    "createdOn": "2024-01-26T08:20:00Z",
-    "categoryName": "Snacks"
+    "title": "Flourless Chocolate Cake",
+    "content": "A dense, rich Belgian chocolate cake topped with a light dusting of cocoa powder and fresh raspberries.",
+    "user_id": 2,
+    "category_id": 5,
+    "created_on": "2024-02-14T21:00:00Z"
   },
   {
-    "title": "Classic French Onion Soup",
-    "content": "Caramelize onions slowly for 40 minutes before adding beef stock and topping with toasted Gruyère cheese.",
-    "postedBy": "Hannah Yellow",
-    "createdOn": "2024-01-25T13:10:00Z",
-    "categoryName": "Soups"
+    "title": "Classic New York Cheesecake",
+    "content": "Smooth and velvety cream cheese filling on a buttery graham cracker crust with a strawberry swirl.",
+    "user_id": 3,
+    "category_id": 5,
+    "created_on": "2024-02-15T15:00:00Z"
   },
   {
-    "title": "Crispy Chicken Schnitzel",
-    "content": "Coat thin chicken breasts in flour, beaten eggs, and breadcrumbs before frying until golden and crunchy.",
-    "postedBy": "Ian Silver",
-    "createdOn": "2024-01-24T10:55:00Z",
-    "categoryName": "Chicken"
+    "title": "Apple Cinnamon Galette",
+    "content": "A rustic, free-form tart filled with caramelized Granny Smith apples and a hint of nutmeg.",
+    "user_id": "Sarah Jenkins",
+    "category_id": 5,
+    "created_on": "2024-02-16T16:45:00Z"
   },
   {
-    "title": "Decadent Chocolate Lava Cake",
-    "content": "Bake chocolate batter until the edges are firm but the center remains warm and liquid.",
-    "postedBy": "Julia Gold",
-    "createdOn": "2024-01-23T18:25:00Z",
-    "categoryName": "Desserts"
+    "title": "Salted Caramel Brownies",
+    "content": "Fudgy dark chocolate brownies swirled with homemade sea-salt caramel and baked to perfection.",
+    "user_id": 2,
+    "category_id": 5,
+    "created_on": "2024-02-17T14:20:00Z"
   },
   {
-    "title": "Sweet and Sour Pork",
-    "content": "Toss fried pork pieces in a vibrant sauce made of pineapple juice, vinegar, and ketchup.",
-    "postedBy": "Kevin Brown",
-    "createdOn": "2024-01-22T07:40:00Z",
-    "categoryName": "Asian"
+    "title": "Iced Matcha Green Tea Latte",
+    "content": "Whisked ceremonial grade matcha powder served over ice with creamy, unsweetened oat milk.",
+    "user_id": "Sarah Jenkins",
+    "category_id": 6,
+    "created_on": "2024-02-18T10:00:00Z"
   },
   {
-    "title": "Homemade Margherita Pizza",
-    "content": "Top fresh dough with crushed San Marzano tomatoes, fresh mozzarella, and a handful of basil leaves.",
-    "postedBy": "Lara White",
-    "createdOn": "2024-01-21T16:50:00Z",
-    "categoryName": "Italian"
+    "title": "Sparkling Hibiscus Lemonade",
+    "content": "A refreshing, tart floral lemonade made with dried hibiscus petals and sparkling mineral water.",
+    "user_id": 3,
+    "category_id": 6,
+    "created_on": "2024-02-19T11:30:00Z"
   },
   {
-    "title": "Zesty Shrimp Scampi",
-    "content": "Sauté large shrimp in a mixture of butter, olive oil, white wine, and crushed red pepper flakes.",
-    "postedBy": "Mike Gray",
-    "createdOn": "2024-01-20T12:35:00Z",
-    "categoryName": "Seafood"
-  },
-  {
-    "title": "Quinoa Veggie Bowl",
-    "content": "Layer cooked quinoa with roasted sweet potatoes, avocado slices, and a lemon-tahini dressing.",
-    "postedBy": "Nina Purple",
-    "createdOn": "2024-01-19T14:20:00Z",
-    "categoryName": "Vegetarian"
-  },
-  {
-    "title": "Authentic Beef Pho",
-    "content": "Infuse beef broth with star anise and cinnamon, then serve over rice noodles with thin steak slices.",
-    "postedBy": "Oscar Blue",
-    "createdOn": "2024-01-18T09:45:00Z",
-    "categoryName": "Asian"
-  },
-  {
-    "title": "Classic Caesar Salad",
-    "content": "Toss romaine lettuce with homemade dressing, crunchy croutons, and shavings of Parmesan cheese.",
-    "postedBy": "Paula Pink",
-    "createdOn": "2024-01-17T11:15:00Z",
-    "categoryName": "Salads"
-  },
-  {
-    "title": "Oven-Roasted Root Vegetables",
-    "content": "Toss carrots, parsnips, and beets in rosemary and olive oil, then roast at 400°F until tender.",
-    "postedBy": "Quinn Orange",
-    "createdOn": "2024-01-16T15:05:00Z",
-    "categoryName": "Vegetarian"
-  },
-  {
-    "title": "Apple Cinnamon Muffins",
-    "content": "Fold diced Granny Smith apples into a cinnamon-spiced batter and bake until a toothpick comes out clean.",
-    "postedBy": "Ryan Green",
-    "createdOn": "2024-01-15T08:50:00Z",
-    "categoryName": "Baking"
+    "title": "Spiced Chai Tea Latte",
+    "content": "Strong black tea slow-brewed with fresh cardamom, cinnamon sticks, cloves, and sweetened with honey.",
+    "user_id": 2,
+    "category_id": 6,
+    "created_on": "2024-02-20T08:45:00Z"
   }
 ]

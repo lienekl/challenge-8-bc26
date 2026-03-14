@@ -1,0 +1,8 @@
+[
+  { "id": 1, "categoryName": "Breakfast" },
+  { "id": 2, "categoryName": "Quick Lunch" },
+  { "id": 3, "categoryName": "Dinner" },
+  { "id": 4, "categoryName": "Vegetarian" },
+  { "id": 5, "categoryName": "Dessert" },
+  { "id": 6, "categoryName": "Drinks" }
+]

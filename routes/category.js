@@ -7,8 +7,8 @@ const { Category } = require("../models/index");
 // Route to add a new post
 app.post("/", async (req, res) => {
   try {
-    const { category_name } = req.body;
-    const category = await Category.create({ category_name });
+    const { categoryName } = req.body;
+    const category = await Category.create({ categoryName });
     res.status(201).json(category);
   } catch (error) {
     console.log(error);
