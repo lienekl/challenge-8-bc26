@@ -90,16 +90,22 @@ function fetchPosts() {
         <p>${post.content}</p>
         <p>Category: ${blogCategory}</p>
         <small>Added by: ${postedBy} on ${new Date(
-          post.created_on  
+          post.created_on
         ).toLocaleString()}</small>`;
 
-         //EDIT button
+        // <div class="post-actions">
+        //   <button class="edit-btn" onclick="editPost(${post.id})">Edit</button>
+        //   <button class="delete-btn" onclick="deletePost(${post.id})">Delete</button>
+        // </div>`;
+
+        //EDIT button
         const editBtn = document.createElement("button");
         editBtn.className = "edit";
         editBtn.textContent = "Edit";
         editBtn.addEventListener("click", async () => {
-          const currentText = item.value;
-          const newText = prompt("Update your text:", currentText);
+          const currentText = post.content;
+          const currentTitle = post.title;
+          const newText = prompt("Update your text:", currentText, currentTitle);
 
           if (newText !== null && newText.trim() !== "") {
             try {
@@ -110,9 +116,10 @@ function fetchPosts() {
               });
 
               if (response.ok) {
-                fetchData(); 
+                fetchData();
               }
-            } catch (error) {
+            }
+            catch (error) {
               console.error("Error updating:", error);
             }
           }
@@ -121,8 +128,8 @@ function fetchPosts() {
         const deleteBtn = document.createElement("button");
         deleteBtn.className = "delete";
         deleteBtn.textContent = "x";
-        deleteBtn.onclick = () => deleteNote(note.id);
-        const deleteNote = async () => {
+        deleteBtn.onclick = () => deletePost(post.id);
+        const deletePost = async () => {
           if (confirm("Do you want to DELETE your blog post?")) {
             try {
               const response = await fetch(`/api/posts${post.id}`, {
@@ -132,13 +139,16 @@ function fetchPosts() {
               if (response.ok) {
                 fetchData(); // 
               }
-            } catch (error) {
+            }
+            catch (error) {
               console.error("Error deleting:", error);
             }
           }
         };
+        const div2 = document.createElement("div");
+        div2.className = "buttons";
 
-        Container.appendChild(div);
+        postsContainer.appendChild(div);
         div.appendChild(editBtn);
         div.appendChild(deleteBtn);
       });
@@ -149,18 +159,20 @@ function createPost() {
   const title = document.getElementById("post-title").value;
   const content = document.getElementById("post-content").value;
   const category_id = document.getElementById("categoryName").value;
-  const user_id = localStorage.getItem("userId");
+  //const user_id = localStorage.getItem("user_id");
   fetch("http://localhost:3001/api/posts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ title, content, category_id, user_id, }),
+    body: JSON.stringify({ title, content, category_id }),  //user_id
   })
     .then((res) => res.json())
     .then(() => {
       alert("Post created successfully");
+      input.value = "";
+      content.value = "";
       fetchPosts();
     });
 }

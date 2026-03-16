@@ -1,142 +1,164 @@
 [
   {
+    "id": 1,
     "title": "Fluffy Blueberry Pancakes",
     "content": "Thick stacks of buttermilk pancakes bursting with fresh berries and drizzled with organic maple syrup.",
-    "user_id": "Sarah Jenkins",
+    "postedBy": "sjenkins",
+    "user_id": 1,
     "category_id": 1,
     "created_on": "2024-02-01T08:00:00Z"
   },
   {
+    "id": 2,
     "title": "Overnight Chia Seed Pudding",
     "content": "A healthy, meal-prep friendly start made with almond milk, honey, and topped with fresh mango chunks.",
+    "postedBy": "arivera",
     "user_id": 2,
     "category_id": 1,
     "created_on": "2024-02-02T07:15:00Z"
   },
   {
+    "id": 3,
     "title": "Shakshuka with Feta",
     "content": "Spiced tomato and bell pepper sauce with poached eggs, salty feta crumbles, and toasted sourdough.",
+    "postedBy": "mgray",
     "user_id": 3,
     "category_id": 1,
     "created_on": "2024-02-03T09:30:00Z"
   },
   {
+    "id": 4,
     "title": "Mediterranean Quinoa Bowl",
     "content": "Fluffy quinoa topped with cucumbers, chickpeas, kalamata olives, and a zesty lemon-tahini dressing.",
-    "user_id": "Sarah Jenkins",
+    "postedBy": "sjenkins",
+    "user_id": 1,
     "category_id": 2,
     "created_on": "2024-02-04T12:00:00Z"
   },
   {
+    "id": 5,
     "title": "Pesto Chicken Wrap",
     "content": "Sliced grilled chicken breast, sun-dried tomatoes, baby spinach, and nut-free basil pesto in a whole wheat tortilla.",
+    "postedBy": "arivera",
     "user_id": 2,
     "category_id": 2,
     "created_on": "2024-02-05T13:10:00Z"
   },
   {
+    "id": 6,
     "title": "Roasted Tomato Basil Soup",
     "content": "Slow-roasted vine tomatoes blended with fresh garden basil, garlic, and a touch of heavy cream.",
+    "postedBy": "mgray",
     "user_id": 3,
     "category_id": 2,
     "created_on": "2024-02-06T12:45:00Z"
   },
   {
+    "id": 7,
     "title": "Garlic Butter Pan-Seared Salmon",
     "content": "Crispy skin salmon fillets finished with a lemon-garlic butter glaze and served with steamed asparagus.",
-    "user_id": "Sarah Jenkins",
+    "postedBy": "sjenkins",
+    "user_id": 1,
     "category_id": 3,
     "created_on": "2024-02-07T18:30:00Z"
   },
   {
+    "id": 8,
     "title": "Slow-Cooker Beef Stew",
     "content": "Tender chunks of chuck roast with root vegetables in a rich, savory red wine and rosemary broth.",
+    "postedBy": "mgray",
     "user_id": 3,
     "category_id": 3,
     "created_on": "2024-02-08T19:00:00Z"
   },
   {
+    "id": 9,
     "title": "Mushroom Risotto",
     "content": "Creamy Arborio rice folded with sautéed cremini mushrooms, aged parmesan, and fresh thyme.",
+    "postedBy": "arivera",
     "user_id": 2,
     "category_id": 3,
     "created_on": "2024-02-09T20:15:00Z"
   },
   {
+    "id": 10,
     "title": "Spicy Thai Green Curry",
     "content": "A fragrant coconut milk-based curry with bamboo shoots, Thai basil, and served over steamed jasmine rice.",
-    "user_id": "Sarah Jenkins",
+    "postedBy": "sjenkins",
+    "user_id": 1,
     "category_id": 3,
     "created_on": "2024-02-10T19:45:00Z"
   },
   {
+    "id": 11,
     "title": "Sweet Potato & Black Bean Tacos",
     "content": "Roasted sweet potato cubes with smoky black beans, fresh avocado, and a tangy lime crema.",
+    "postedBy": "arivera",
     "user_id": 2,
     "category_id": 4,
     "created_on": "2024-02-11T18:00:00Z"
   },
   {
+    "id": 12,
     "title": "Eggplant Parmesan Bake",
     "content": "Layers of herb-breaded eggplant slices, homemade marinara sauce, and gooey melted mozzarella.",
+    "postedBy": "mgray",
     "user_id": 3,
     "category_id": 4,
     "created_on": "2024-02-12T17:30:00Z"
   },
   {
+    "id": 13,
     "title": "Crispy Tofu Stir-Fry",
     "content": "Extra-firm tofu cubes tossed with snap peas, bell peppers, and a ginger-soy glaze.",
-    "user_id": "Sarah Jenkins",
+    "postedBy": "sjenkins",
+    "user_id": 1,
     "category_id": 4,
     "created_on": "2024-02-13T12:20:00Z"
   },
   {
+    "id": 14,
     "title": "Flourless Chocolate Cake",
     "content": "A dense, rich Belgian chocolate cake topped with a light dusting of cocoa powder and fresh raspberries.",
+    "postedBy": "arivera",
     "user_id": 2,
     "category_id": 5,
     "created_on": "2024-02-14T21:00:00Z"
   },
   {
+    "id": 15,
     "title": "Classic New York Cheesecake",
     "content": "Smooth and velvety cream cheese filling on a buttery graham cracker crust with a strawberry swirl.",
+    "postedBy": "mgray",
     "user_id": 3,
     "category_id": 5,
     "created_on": "2024-02-15T15:00:00Z"
   },
   {
+    "id": 16,
     "title": "Apple Cinnamon Galette",
     "content": "A rustic, free-form tart filled with caramelized Granny Smith apples and a hint of nutmeg.",
-    "user_id": "Sarah Jenkins",
+    "postedBy": "sjenkins",
+    "user_id": 1,
     "category_id": 5,
     "created_on": "2024-02-16T16:45:00Z"
   },
   {
+    "id": 17,
     "title": "Salted Caramel Brownies",
     "content": "Fudgy dark chocolate brownies swirled with homemade sea-salt caramel and baked to perfection.",
+    "postedBy": "arivera",
     "user_id": 2,
     "category_id": 5,
     "created_on": "2024-02-17T14:20:00Z"
   },
   {
+    "id": 18,
     "title": "Iced Matcha Green Tea Latte",
     "content": "Whisked ceremonial grade matcha powder served over ice with creamy, unsweetened oat milk.",
-    "user_id": "Sarah Jenkins",
+    "postedBy": "sjenkins",
+    "user_id": 1,
     "category_id": 6,
     "created_on": "2024-02-18T10:00:00Z"
-  },
-  {
-    "title": "Sparkling Hibiscus Lemonade",
-    "content": "A refreshing, tart floral lemonade made with dried hibiscus petals and sparkling mineral water.",
-    "user_id": 3,
-    "category_id": 6,
-    "created_on": "2024-02-19T11:30:00Z"
-  },
-  {
-    "title": "Spiced Chai Tea Latte",
-    "content": "Strong black tea slow-brewed with fresh cardamom, cinnamon sticks, cloves, and sweetened with honey.",
-    "user_id": 2,
-    "category_id": 6,
-    "created_on": "2024-02-20T08:45:00Z"
   }
 ]

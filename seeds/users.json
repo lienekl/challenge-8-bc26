@@ -2,36 +2,19 @@
   {
     "id": 1,
     "username": "sjenkins",
-    "name": "Sarah Jenkins",
     "email": "sarah@example.com",
     "password": "password123"
   },
   {
     "id": 2,
     "username": "arivera",
-    "name": "Alex Rivera",
     "email": "alex@example.com",
     "password": "password123"
   },
   {
     "id": 3,
     "username": "mgray",
-    "name": "Mike Gray",
     "email": "mike@example.com",
-    "password": "password123"
-  },
-  {
-    "id": 4,
-    "username": "jdoe",
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123"
-  },
-  {
-    "id": 5,
-    "username": "ckitchen",
-    "name": "Chef Kitchen",
-    "email": "chef@example.com",
     "password": "password123"
   }
 ]
