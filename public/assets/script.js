@@ -149,8 +149,10 @@ function fetchPosts() {
         div2.className = "buttons";
 
         postsContainer.appendChild(div);
-        div.appendChild(editBtn);
-        div.appendChild(deleteBtn);
+        div2.appendChild(editBtn);
+        div2.appendChild(deleteBtn);
+
+        div.appendChild(div2);
       });
     });
 }
@@ -166,7 +168,7 @@ function createPost() {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ title, content, category_id }),  //user_id
+    body: JSON.stringify({ title, content, postedBy: "User" }),  //user_id
   })
     .then((res) => res.json())
     .then(() => {

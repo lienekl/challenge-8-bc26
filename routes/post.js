@@ -59,6 +59,10 @@ app.put("/:id", async (req, res) => {
 app.delete("/:id", async (req, res) => {
   try {
     const post = await Post.destroy({ where: { id: req.params.id } });
+
+    if (rowsDeleted === 0) {
+      return res.status(404).json({ error: "Post not found" });
+    }
     res.json(post);
   } catch (error) {
     res.status(500).json({ error: "Error deleting post" });
