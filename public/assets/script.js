@@ -81,23 +81,15 @@ function fetchPosts() {
         const div = document.createElement("div");
         div.className = "blog-posts";
 
-        const blogCategory = post.category ? post.category.categoryName : "General";
-        const postedBy = post.user ? post.user.username : "Unknown Author";
-
-
+      
         div.innerHTML = `
         <h3>${post.title}</h3>
         <p>${post.content}</p>
         <p>Category: ${blogCategory}</p>
         <small>Added by: ${postedBy} on ${new Date(
-          post.created_on
-        ).toLocaleString()}</small>`;
+          post.createdOn).toLocaleString()}</small>`;
 
-        // <div class="post-actions">
-        //   <button class="edit-btn" onclick="editPost(${post.id})">Edit</button>
-        //   <button class="delete-btn" onclick="deletePost(${post.id})">Delete</button>
-        // </div>`;
-
+       
         //EDIT button
         const editBtn = document.createElement("button");
         editBtn.className = "edit";
