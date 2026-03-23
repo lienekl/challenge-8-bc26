@@ -81,15 +81,15 @@ function fetchPosts() {
         const div = document.createElement("div");
         div.className = "blog-posts";
 
-      
+
         div.innerHTML = `
         <h3>${post.title}</h3>
         <p>${post.content}</p>
-        <p>Category: ${blogCategory}</p>
-        <small>Added by: ${postedBy} on ${new Date(
+        <p>Category: ${post.category ? post.category.categoryName : "Uncategorized"}</p>
+        <small>Added by: ${post.user ? post.user.username : "Unknown"} on ${new Date(
           post.createdOn).toLocaleString()}</small>`;
 
-       
+
         //EDIT button
         const editBtn = document.createElement("button");
         editBtn.className = "edit";
@@ -97,18 +97,22 @@ function fetchPosts() {
         editBtn.addEventListener("click", async () => {
           const currentText = post.content;
           const currentTitle = post.title;
-          const newText = prompt("Update your text:", currentText, currentTitle);
+          const newTitle = prompt("Update the title:", currentTitle );
+          const newText = prompt("Update the post:", currentText)
 
           if (newText !== null && newText.trim() !== "") {
             try {
               const response = await fetch(`/api/posts/${post.id}`, {
                 method: "PUT",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ post: newText }),
+                headers: {
+                  "Content-Type": "application/json",
+                  Authorization: `Bearer ${token}`
+                },
+                body: JSON.stringify({ title: newTitle, content: newText }),
               });
 
               if (response.ok) {
-                fetchData();
+                fetchPosts();
               }
             }
             catch (error) {
@@ -124,12 +128,13 @@ function fetchPosts() {
         const deletePost = async () => {
           if (confirm("Do you want to DELETE your blog post?")) {
             try {
-              const response = await fetch(`/api/posts${post.id}`, {
+              const response = await fetch(`/api/posts/${post.id}`, {
                 method: "DELETE",
+                headers: { Authorization: `Bearer ${token}` }
               });
 
               if (response.ok) {
-                fetchData(); // 
+                fetchPosts();  
               }
             }
             catch (error) {
@@ -143,7 +148,6 @@ function fetchPosts() {
         postsContainer.appendChild(div);
         div2.appendChild(editBtn);
         div2.appendChild(deleteBtn);
-
         div.appendChild(div2);
       });
     });
@@ -152,21 +156,39 @@ function fetchPosts() {
 function createPost() {
   const title = document.getElementById("post-title").value;
   const content = document.getElementById("post-content").value;
-  const category_id = document.getElementById("categoryName").value;
-  //const user_id = localStorage.getItem("user_id");
-  fetch("http://localhost:3001/api/posts", {
+  const category_id = parseInt(document.getElementById("categoryName").value);
+  const user_id = localStorage.getItem("user_id");
+
+  if (!title || !content || !category_id) {
+    alert("Please fill in all fields and choose a category!");
+    return;
+  }
+
+ fetch("http://localhost:3001/api/posts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify({ title, content, postedBy: "User" }),  //user_id
+    body: JSON.stringify({ 
+      title: title, 
+      content: content, 
+      category_id: category_id, 
+      userId: parseInt(user_id) 
+    }),  
   })
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to create post");
+      return res.json();
+    })
     .then(() => {
       alert("Post created successfully");
-      input.value = "";
-      content.value = "";
+      // Clear inputs
+      document.getElementById("post-title").value = "";
+      document.getElementById("post-content").value = "";
+      document.getElementById("categoryName").value = "";
+      // Refresh the feed
       fetchPosts();
-    });
+    })
+    .catch(err => console.error("Error:", err));
 }

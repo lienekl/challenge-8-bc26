@@ -21,14 +21,14 @@ Post.init(
       allowNull: false,
     },
    
-    user_id: {
+    userId: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
         key: "id",
       },
     },
-    category_id: {
+    categoryId: {
       type: DataTypes.INTEGER,
       references: {
         model: "category",
@@ -36,7 +36,7 @@ Post.init(
       },
     },
 
-    created_on: {
+    createdOn: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: Sequelize.NOW,
