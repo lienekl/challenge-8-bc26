@@ -30,6 +30,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.18.2",
     "nodemon": "^3.1.9",
+    "seed": "^0.4.4",
     "sequelize": "^6.37.7"
   },
   "devDependencies": {

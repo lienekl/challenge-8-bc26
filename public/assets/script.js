@@ -93,7 +93,7 @@ function fetchPosts() {
         //EDIT button
         const editBtn = document.createElement("button");
         editBtn.className = "edit";
-        editBtn.textContent = "Edit";
+        editBtn.textContent = "EDIT";
         editBtn.addEventListener("click", async () => {
           const currentText = post.content;
           const currentTitle = post.title;
@@ -123,7 +123,7 @@ function fetchPosts() {
         // DELETE button
         const deleteBtn = document.createElement("button");
         deleteBtn.className = "delete";
-        deleteBtn.textContent = "x";
+        deleteBtn.textContent = "DELETE";
         deleteBtn.onclick = () => deletePost(post.id);
         const deletePost = async () => {
           if (confirm("Do you want to DELETE your blog post?")) {
