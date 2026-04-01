@@ -32,18 +32,15 @@ function login() {
   })
     .then((res) => res.json())
     .then((data) => {
-      // Save the token in the local storage
       if (data.token) {
         localStorage.setItem("authToken", data.token);
-        localStorage.setItem("userId", data.userId)
+        // Ensure we save the user ID so we can check ownership later
+        localStorage.setItem("user_id", data.userData.id)
         token = data.token;
 
         alert("User Logged In successfully");
-
-        // Fetch the posts list
         fetchPosts();
 
-        // Hide the auth container and show the app container as we're now logged in
         document.getElementById("auth-container").classList.add("hidden");
         document.getElementById("app-container").classList.remove("hidden");
       } else {
@@ -60,8 +57,8 @@ function logout() {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
   }).then(() => {
-    // Clear the token from the local storage as we're now logged out
     localStorage.removeItem("authToken");
+    localStorage.removeItem("user_id"); // Clear user_id on logout
     token = null;
     document.getElementById("auth-container").classList.remove("hidden");
     document.getElementById("app-container").classList.add("hidden");
@@ -69,6 +66,9 @@ function logout() {
 }
 
 function fetchPosts() {
+  // Get the ID of the person currently logged in
+  const currentUserId = localStorage.getItem("user_id");
+
   fetch("http://localhost:3001/api/posts", {
     method: "GET",
     headers: { Authorization: `Bearer ${token}` },
@@ -77,10 +77,10 @@ function fetchPosts() {
     .then((posts) => {
       const postsContainer = document.getElementById("posts");
       postsContainer.innerHTML = "";
+      
       posts.forEach((post) => {
         const div = document.createElement("div");
         div.className = "blog-posts";
-
 
         div.innerHTML = `
         <h3>${post.title}</h3>
@@ -89,66 +89,73 @@ function fetchPosts() {
         <small>Added by: ${post.user ? post.user.username : "Unknown"} on ${new Date(
           post.createdOn).toLocaleString()}</small>`;
 
+        if (post.user_id == currentUserId) {
+          const div2 = document.createElement("div");
+          div2.className = "buttons";
 
-        //EDIT button
-        const editBtn = document.createElement("button");
-        editBtn.className = "edit";
-        editBtn.textContent = "EDIT";
-        editBtn.addEventListener("click", async () => {
-          const currentText = post.content;
-          const currentTitle = post.title;
-          const newTitle = prompt("Update the title:", currentTitle );
-          const newText = prompt("Update the post:", currentText)
+          // EDIT button
+          const editBtn = document.createElement("button");
+          editBtn.className = "edit";
+          editBtn.textContent = "EDIT";
+          editBtn.addEventListener("click", async () => {
+            const currentText = post.content;
+            const currentTitle = post.title;
+            const newTitle = prompt("Update the title:", currentTitle);
+            const newText = prompt("Update the post:", currentText)
 
-          if (newText !== null && newText.trim() !== "") {
-            try {
-              const response = await fetch(`/api/posts/${post.id}`, {
-                method: "PUT",
-                headers: {
-                  "Content-Type": "application/json",
-                  Authorization: `Bearer ${token}`
-                },
-                body: JSON.stringify({ title: newTitle, content: newText }),
-              });
+            if (newText !== null && newText.trim() !== "") {
+              try {
+                const response = await fetch(`http://localhost:3001/api/posts/${post.id}`, {
+                  method: "PUT",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
+                  },
+                  body: JSON.stringify({ title: newTitle, content: newText }),
+                });
 
-              if (response.ok) {
-                fetchPosts();
+                if (response.ok) {
+                  fetchPosts();
+                }
+              }
+              catch (error) {
+                console.error("Error updating:", error);
               }
             }
-            catch (error) {
-              console.error("Error updating:", error);
-            }
-          }
-        });
-        // DELETE button
-        const deleteBtn = document.createElement("button");
-        deleteBtn.className = "delete";
-        deleteBtn.textContent = "DELETE";
-        deleteBtn.onclick = () => deletePost(post.id);
-        const deletePost = async () => {
-          if (confirm("Do you want to DELETE your blog post?")) {
-            try {
-              const response = await fetch(`/api/posts/${post.id}`, {
-                method: "DELETE",
-                headers: { Authorization: `Bearer ${token}` }
-              });
+          });
 
-              if (response.ok) {
-                fetchPosts();  
+          // DELETE button
+          const deleteBtn = document.createElement("button");
+          deleteBtn.className = "delete";
+          deleteBtn.textContent = "DELETE";
+          
+          const deletePost = async (id) => {
+            if (confirm("Do you want to DELETE your blog post?")) {
+              try {
+                const response = await fetch(`http://localhost:3001/api/posts/${id}`, {
+                  method: "DELETE",
+                  headers: { Authorization: `Bearer ${token}` }
+                });
+
+                if (response.ok) {
+                  fetchPosts();
+                }
+              }
+              catch (error) {
+                console.error("Error deleting:", error);
               }
             }
-            catch (error) {
-              console.error("Error deleting:", error);
-            }
-          }
-        };
-        const div2 = document.createElement("div");
-        div2.className = "buttons";
+          };
+
+          deleteBtn.onclick = () => deletePost(post.id);
+
+          div2.appendChild(editBtn);
+          div2.appendChild(deleteBtn);
+          div.appendChild(div2);
+        }
+       
 
         postsContainer.appendChild(div);
-        div2.appendChild(editBtn);
-        div2.appendChild(deleteBtn);
-        div.appendChild(div2);
       });
     });
 }
@@ -164,7 +171,7 @@ function createPost() {
     return;
   }
 
- fetch("http://localhost:3001/api/posts", {
+  fetch("http://localhost:3001/api/posts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -183,11 +190,9 @@ function createPost() {
     })
     .then(() => {
       alert("Post created successfully");
-      // Clear inputs
       document.getElementById("post-title").value = "";
       document.getElementById("post-content").value = "";
       document.getElementById("categoryName").value = "";
-      // Refresh the feed
       fetchPosts();
     })
     .catch(err => console.error("Error:", err));

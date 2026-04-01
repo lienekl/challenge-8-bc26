@@ -88,11 +88,14 @@ select {
 }
 
 .buttons {
-    width: 70%;
+    width: 60%;
     display: flex;
     justify-content: center;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    background-color: #F3EFE0;
+    border: #464241;
+    color: #464241;
     margin: auto;
 }
 .edit {

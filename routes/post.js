@@ -7,24 +7,26 @@ const { Post, User, Category } = require("../models/index");
 // Route to add a new post
 app.post("/", async (req, res) => {
   try {
-    const { title, content, username, categoryName } = req.body;
-    const post = await Post.create({ title, content, username,  categoryName });
-
+    const { title, content, userId, category_id } = req.body;
+    const post = await Post.create({ title, content, user_id:userId, category_id });
+   
     res.status(201).json(post);
   } catch (error) {
     res.status(500).json({ error: "Error adding post" });
   }
 });
 
+
+
 // Route to get all posts
 app.get("/", async (req, res) => {
   try {
     const posts = await Post.findAll({
-          include: [
-            { model: User, as: "user", attributes: ["username"] }, 
-            { model: Category, as: "category", attributes: ["categoryName"] }
-          ],
-        } );
+      include: [
+        { model: User, as: "user", attributes: ["username"] },
+        { model: Category, as: "category", attributes: ["categoryName"] }
+      ],
+    });
 
     res.json(posts);
   } catch (error) {
@@ -56,14 +58,21 @@ app.put("/:id", async (req, res) => {
 });
 
 // Route to delete a post
-app.delete("/:id", async (req, res) => {
+const { authMiddleware } = require("../utils/auth");
+app.delete("/:id", authMiddleware, async (req, res) => {
   try {
-    const post = await Post.destroy({ where: { id: req.params.id } });
+    const post = await Post.findByPk(req.params.id);
 
-    if (rowsDeleted === 0) {
-      return res.status(404).json({ error: "Post not found" });
+    if (!post) {
+      return res.status(404).json({ message: "Post not found" });
     }
-    res.json(post);
+
+    if (post.user_id !== req.user.id) {
+      return res.status(403).json({ message: "You can only delete your own posts!" });
+    }
+
+    await post.destroy();
+    res.json({ message: "Post deleted" });
   } catch (error) {
     res.status(500).json({ error: "Error deleting post" });
   }
